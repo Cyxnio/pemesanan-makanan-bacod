@@ -1,0 +1,102 @@
+:root {
+    --primary: #FF6B01;
+
+}
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;1,400&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 414px;
+    min-height: 100vh;
+    margin: auto;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+    display: flex;
+    height: 50px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary);
+    color: white;
+}
+
+.hamburger {
+    display: flex;
+    margin: 16px 10px;
+    background-color: var(--primary);
+    border-radius: 16px;
+    height: 122px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.hamburger .text {
+    margin-left: 16px;
+    align-self: center;
+}
+
+.hamburger h1 {
+    font-size: 20px;
+}
+
+.hamburger p {
+    font-size: 8px;
+}
+
+.hamburger .img {
+    height: 100%;
+}
+
+.hamburger img {
+    height: 122px;
+    border-bottom-right-radius: 16px;
+}
+
+.content {
+}
+
+.list-makanan {
+    margin: 0 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    border-radius: 16px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.card img {
+    width: 120px;
+    height: 114px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.card .detail {
+    margin: 8px 16px;
+    text-align: start;
+    color: black;
+}
+
+.card h1 {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.card p {
+    font-size: 8px;
+}
+
+.card h3 {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--primary);
+}
