@@ -6,8 +6,8 @@
   @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;1,400&display=swap');
 
 body {
-    margin: 0;
-    padding: 0;
+    margin: 0; 
+    background-color: whitesmoke;
 }
 
 .container {
@@ -15,6 +15,7 @@ body {
     min-height: 100vh;
     margin: auto;
     color: white;
+    background-color: white;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -63,14 +64,14 @@ body {
 }
 
 .list-makanan {
-    margin: 0 10px;
-    display: flex;
-    justify-content: space-between;
 }
 
 .card {
     border-radius: 16px;
+    margin-left: 10px;
+    margin-bottom: 10px;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    display: inline-block;
 }
 
 .card img {
@@ -98,5 +99,46 @@ body {
 .card h3 {
     font-size: 12px;
     font-weight: 600;
+    position: static;
     color: var(--primary);
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    position: sticky;
+    background-color: white;
+    padding: 0.5rem;
+    text-align: center;
+    bottom: 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.menu a {
+    color: var(--textDark);
+    text-decoration: none;
+}
+
+.itemMenu {
+    margin: 0px 40px;
+    color: black;
+}
+
+.itemMenu p {
+    font-size: 12px;
+    margin: 0;
+    font-weight: 700;
+}
+
+.itemMenu .active {
+    color: var(--primary);  
+    border-top: var(--primary);
+}
+
+
+@media (max-width: 410px) {
+    .card img {
+        width: 90%;
+    }
 }
