@@ -18,12 +18,20 @@ app = express();
 // SETINGAN KONEKSI MYSQL
 // SESUAIKAN DENGAN KONEKSI KALIAN
 connection = mysql.createConnection({
-  host     : 'sql12.freemysqlhosting.net',
-  user     : 'sql12599979',
-  password : 'kDInpv9VJS',
-//  database : 'sql12599979',
+  host     : 'db4free.net',
+  user     : 'kelompok1',
+  password : 'kelompok1',
+ // database : 'u1084987_kelompok_1',
   port     : '3306'
 });
+
+// connection = mysql.createConnection({
+//   host     : 'sql12.freemysqlhosting.net',
+//   user     : 'sql12599979',
+//   password : 'kDInpv9VJS',
+// //  database : 'sql12599979',
+//   port     : '3306'
+// });
 
 /*connection = mysql.createConnection({
   host     : 'localhost',

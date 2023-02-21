@@ -1,5 +1,21 @@
 app.get("/menu", (req, res) => {
-  connection.query("select * from u1084987_kelompok_1.tabel_menu", (error, result) => {
+  connection.query("select * from db_kelompok_1.tabel_menu", (error, result) => {
+    if (error) {
+      res.status(500).json({
+        success: false,
+        results: error 
+      });
+    } else {
+      res.status(200).json({
+        success: true,
+        results: result 
+      });
+    }
+  })
+});
+
+app.get("/menu/:id", (req, res) => {
+  connection.query(`select * from db_kelompok_1.tabel_menu where nomer = '${req.params.id}'`, (error, result) => {
     if (error) {
       res.status(500).json({
         success: false,

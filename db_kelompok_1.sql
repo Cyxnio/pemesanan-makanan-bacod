@@ -16,9 +16,9 @@
 
 
 -- Dumping database structure for sql12599979
-DROP DATABASE IF EXISTS `sql12599979`;
-CREATE DATABASE IF NOT EXISTS `sql12599979` /*!40100 DEFAULT CHARACTER SET latin1 */;
-USE `sql12599979`;
+DROP DATABASE IF EXISTS `db_kelompok_1`;
+CREATE DATABASE IF NOT EXISTS `db_kelompok_1` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `db_kelompok_1`;
 
 -- Dumping structure for table sql12599979.tabel_menu
 DROP TABLE IF EXISTS `tabel_menu`;

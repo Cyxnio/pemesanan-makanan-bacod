@@ -13,7 +13,7 @@ app.post("/pesan", (req, res) => {
   parsed.forEach(items => {
     console.log(items.nama);
     let stokAvailable = false;
-    connection.query("select nomer from sql12599979.tabel_menu where nomer = ? and stok_makanan = 1", items.nomer, (error, result) => {
+    connection.query("select nomer from db_kelompok_1.tabel_menu where nomer = ? and stok_makanan = 1", items.nomer, (error, result) => {
     console.log(stokAvailable);
       if (error) {
         res.status(200).json({
@@ -23,7 +23,7 @@ app.post("/pesan", (req, res) => {
         stokAvailable = false;
         console.log(error);
       } else {
-        connection.query(`insert into sql12599979.tabel_pemesanan set ?`, data, (errorInsert, resultInsert) => {
+        connection.query(`insert into db_kelompok_1.tabel_pemesanan set ?`, data, (errorInsert, resultInsert) => {
           if(errorInsert){
             res.status(500).json({
               success: false,
@@ -38,12 +38,6 @@ app.post("/pesan", (req, res) => {
       });
       }
     })
-    console.log(stokAvailable);
-    if(stokAvailable) {
-
-  } else {
-    console.log("stok kosong");
-  }
   });
 
   // connection.query("insert into jurusan set ?", data, (error, result) => {
