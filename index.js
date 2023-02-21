@@ -18,10 +18,10 @@ app = express();
 // SETINGAN KONEKSI MYSQL
 // SESUAIKAN DENGAN KONEKSI KALIAN
 connection = mysql.createConnection({
-  host     : '5.181.216.42',
-  user     : 'u1084987_kelompok_1',
-  password : 'mjig6myq84',
-//  database : 'u1084987_kelompok_1',
+  host     : 'sql12.freemysqlhosting.net',
+  user     : 'sql12599979',
+  password : 'kDInpv9VJS',
+//  database : 'sql12599979',
   port     : '3306'
 });
 
@@ -47,7 +47,8 @@ connection.connect(function(err) {
 
 //#region - LIST MODULE
 //require("./modules/mahasiswa.js");                                                                
-require("./modules/menu.js");                                                                
+require("./modules/menu.js");  
+require("./modules/pemesanan.js");                                                              
 //#endregion - LIST MODULE
 
 app.listen(9000, () => {
