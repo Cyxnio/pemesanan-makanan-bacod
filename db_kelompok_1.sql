@@ -14,6 +14,23 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
+
+-- Dumping database structure for sql12599979
+DROP DATABASE IF EXISTS `sql12599979`;
+CREATE DATABASE IF NOT EXISTS `sql12599979` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `sql12599979`;
+
+-- Dumping structure for table sql12599979.tabel_menu
+DROP TABLE IF EXISTS `tabel_menu`;
+CREATE TABLE IF NOT EXISTS `tabel_menu` (
+  `nomer` int(11) NOT NULL,
+  `nama_makanan` varchar(50) NOT NULL DEFAULT '',
+  `harga_makanan` int(11) NOT NULL,
+  `stok_makanan` tinyint(4) NOT NULL DEFAULT '0',
+  `foto_makanan` varchar(50) NOT NULL DEFAULT '',
+  PRIMARY KEY (`nomer`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 -- Dumping data for table sql12599979.tabel_menu: ~6 rows (approximately)
 INSERT INTO `tabel_menu` (`nomer`, `nama_makanan`, `harga_makanan`, `stok_makanan`, `foto_makanan`) VALUES
 	(1, 'nasi goreng', 15000, 1, 'https://i0.wp.com/resepkoki.id/wp-content/uploads/'),
@@ -22,6 +39,20 @@ INSERT INTO `tabel_menu` (`nomer`, `nama_makanan`, `harga_makanan`, `stok_makana
 	(4, 'iga bakar', 30000, 1, 'https://awsimages.detik.net.id/community/media/vis'),
 	(5, 'es lemon', 8000, 1, 'https://static.republika.co.id/uploads/images/inpi'),
 	(6, 'jus strawberry', 10000, 1, 'https://www.suppliersalon.com/wp-content/uploads/2');
+
+-- Dumping structure for table sql12599979.tabel_pemesanan
+DROP TABLE IF EXISTS `tabel_pemesanan`;
+CREATE TABLE IF NOT EXISTS `tabel_pemesanan` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nomor_meja` int(11) NOT NULL DEFAULT '0',
+  `tanggal_pesan` varchar(50) NOT NULL,
+  `pesanan` longtext NOT NULL,
+  `nama_pemesan` varchar(50) NOT NULL,
+  `total_pesanan` int(11) NOT NULL,
+  `no_telepon` varchar(50) NOT NULL,
+  `note` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 -- Dumping data for table sql12599979.tabel_pemesanan: ~2 rows (approximately)
 INSERT INTO `tabel_pemesanan` (`id`, `nomor_meja`, `tanggal_pesan`, `pesanan`, `nama_pemesan`, `total_pesanan`, `no_telepon`, `note`) VALUES
