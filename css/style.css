@@ -60,9 +60,6 @@ body {
     border-bottom-right-radius: 16px;
 }
 
-.content {
-}
-
 .list-makanan {
     display: grid;
     margin: 0 10px;
@@ -100,18 +97,118 @@ body {
 }
 
 .card h3 {
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 600;
     position: static;
     color: var(--primary);
 }
 
-.menu {
+.card .btn {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.card .button {
+    height: 15px;
+    width: 30px;
+    cursor: pointer;
+    margin-bottom: 0;
+    margin-left: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: #FF6B01;
+    color: white;
+}
+
+.card .button:hover {
+    height: 20px;
+}
+
+.food-items{
+    display: none;
+}
+.cart-toggle{
+    display: none;
+}
+#cart-page{
+    background: white;
+    margin: 40px 10px;
+    margin-right: 50px;
+    padding: 20px 30px;
+    padding-bottom: 30px;
+    position: relative;
+}
+#cart-title{
+    font-size: 35px;
+    margin: 0;
+    color: indianred;
+}
+#cart-page table{
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+}
+#cart-page table thead td{
+    font-size: 25px;
+    padding-bottom: 10px;
+}
+
+.cart-btn{
+    outline: none;
+    border: none;
+    background: crimson;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    bottom: 30px;
+    margin: 15px 0;
+    cursor: pointer;
+}
+#cart-page table tbody td{
+    padding: 10px 0;
+    font-size: 20px;
+}
+#cart-page table tbody button{
+    outline: none;
+    border: none;
+    font-size: 16px;
+    background: none;
+    background: lightcoral;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+#cart-page table tbody img{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+}
+#checkout{
+    text-align: center;
+    margin: 40px auto;
+    border-radius: 5px;
+    background: white;
+    padding: 10px 20px;
+}
+#checkout p{
+    margin: 15px 0;
+    float: left;
+}
+#total-price,#total-item{
+    font-size: 25px;
+    color: indianred;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
     background: white;
     position: sticky;
-    padding: 0.5rem 0;vv
+    padding: 0.5rem 0;
     bottom: 0;
 }
 

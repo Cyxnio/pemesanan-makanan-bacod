@@ -24,7 +24,7 @@ app.get("/menu/:id", (req, res) => {
     } else {
       res.status(200).json({
         success: true,
-        results: result 
+        results: result
       });
     }
   })

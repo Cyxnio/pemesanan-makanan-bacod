@@ -21,7 +21,8 @@ connection = mysql.createConnection({
   host     : 'db4free.net',
   user     : 'kelompok1',
   password : 'kelompok1',
- // database : 'u1084987_kelompok_1',
+//  database : 'u1084987_kelompok_1',
+database: 'db_kelompok_1',
   port     : '3306'
 });
 
