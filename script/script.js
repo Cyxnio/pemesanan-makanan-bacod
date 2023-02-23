@@ -33,12 +33,8 @@ const getCart = () => {
     let cards = '';
     cartStorage.map((cartItem) => {
         cards += `     <div class="card">
-        <div class="image">
-            <img src="${cartItem.foto_makanan}" width="200px" alt="">
-        </div>
         <div class="detail">
             <h1>${cartItem.nama_makanan}</h1>
-            <p>deskripsi</p>
             <div class="btn">
                 <h3>Rp. ${cartItem.harga_makanan}</h3>
                 <input onclick="addToCart('${cartItem.nama_makanan}', '${cartItem.harga_makanan}', '${cartItem.foto_makanan}', '${cartItem.nomer}')" type="button" class="button" value="+">

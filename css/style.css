@@ -125,6 +125,30 @@ body {
     height: 20px;
 }
 
+.form {
+    color: black;
+    margin: 0 10px;
+    position: sticky;
+    bottom: 4rem;
+    background-color: white;
+}
+
+.form form {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 10px;
+}
+
+.form .btn-form {
+    border-radius: 4px;
+    border-color: #FF6B01;
+}
+
+.form .submit {
+    cursor: pointer;
+    background-color: #FF6B01;
+}
+
 .menu {
     display: flex;
     justify-content: space-around;
