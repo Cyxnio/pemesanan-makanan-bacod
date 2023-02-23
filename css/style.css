@@ -155,3 +155,10 @@ body {
     border-top: var(--primary);
 }
 
+/* card */
+.list-cart {
+    display: grid;
+    margin: 0 10px;
+    grid-template-columns: ;
+    grid-gap: 10px;
+}
