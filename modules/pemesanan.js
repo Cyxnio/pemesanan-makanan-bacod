@@ -39,18 +39,4 @@ app.post("/pesan", (req, res) => {
       }
     })
   });
-
-  // connection.query("insert into jurusan set ?", data, (error, result) => {
-    //   if (error) {
-    //     res.status(500).json({
-    //       success: false,
-    //       results: error
-    //     })
-    //   } else {
-    //     res.status(200).json({
-    //       success: true,
-    //       results: result
-    //     })
-    //   }
-    // })
 });
