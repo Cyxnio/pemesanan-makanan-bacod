@@ -21,16 +21,16 @@
                 
         </div>    
         <div class="form">
-            <form action="">
-                <label for="">Nama Pemesan</label>
-                <input type="text" name="" id="" class="btn-form">
-                <label for="">Nomor Meja</label>
-                <input type="text" name="" id="" class="btn-form">
-                <label for="">No. telepon</label>
-                <input type="number" name="" id="" class="btn-form">
-                <label for="">Note</label>
-                <input type="text" name="" id="" class="btn-form">
-                <input type="button" value="Checkout" class="btn-form submit">
+            <form id="form_checkout" method="post" action="http://localhost:9000/pesan" >
+                <label for="nama_pemesan_id">Nama Pemesan</label>
+                <input type="text" name="nama_pemesan" id="nama_pemesan_id" class="btn-form">
+                <label for="nomor_meja_id">Nomor Meja</label>
+                <input type="text" name="nomor_meja" id="nomor_meja_id" class="btn-form">
+                <label for="no_telepon_id">No. telepon</label>
+                <input type="number" name="no_telepon" id="no_telepon_id" class="btn-form">
+                <label for="note_id">Note</label>
+                <input type="text" name="note" id="note_id" class="btn-form">
+                <button type="submit" class="btn-form submit" value="submit">
             </form>
         </div>
 

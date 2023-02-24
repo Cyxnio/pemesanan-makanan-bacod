@@ -31,15 +31,16 @@ const getCart = () => {
     let cartStorage = JSON.parse(localStorage.getItem("cart"));
     cart = cartStorage
     let cards = '';
-    cartStorage.map((cartItem) => {
+    cartStorage.map((cartItem, index) => {
         cards += `     <div class="card">
         <div class="detail">
             <h1>${cartItem.nama_makanan}</h1>
             <div class="btn">
                 <h3>Rp. ${cartItem.harga_makanan}</h3>
+                <input id="${cartItem.nomer}" type="button" class="button btn-remove" value="-">
+                <h3>${cartItem.jumlah}</h3>
                 <input onclick="addToCart('${cartItem.nama_makanan}', '${cartItem.harga_makanan}', '${cartItem.foto_makanan}', '${cartItem.nomer}')" type="button" class="button" value="+">
                 <i id="${cartItem.nomer}" type="button" class="button btn-delete" data-feather="trash-2"></i>
-                <input id="${cartItem.nomer}" type="button" class="button btn-remove" value="-">
             </div>
         </div>
     </div>`
@@ -125,5 +126,35 @@ const deleteCart = (nomer) => {
     getCart()
 }
 
-
+ const formCheckout = document.getElementById('form_checkout');
+ formCheckout.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const fd = new FormData(formCheckout)
+    const data = JSON.stringify(Object.fromEntries(fd));
+    const pesanan = localStorage.getItem('cart')
+ })
+// const checkout = (nomor_meja, tanggal_pesan, pesanan, nama_pemesan, total_pesanan, no_telepon, note) => {
+//     let dom = document.getElementById  
+//     let saved = localStorage.getItem("cart") 
+//     let formCheckout = document.querySelector('#form_checkout')
+//     let formData = new FormData(formCheckout);
+//     formData.append('nomor_meja', nomor_meja)
+//     console.log(formData)
+    // fetch('localhost:9000/pesan', {
+    //     method: 'POST',
+    //     body: JSON.stringify({
+    //       title:'pesan',
+    //       body: {
+    //           nomor_meja : dom('nomor_meja').value,
+    //           tanggal_pesan : dom('tanggal_pesan').value,
+    //           pesanan : localStorage.getItem("cart"),
+    //           nama_pemesan : dom('nomor_meja').value,
+    //           total_pesanan : dom('nomor_meja').value,
+    //           no_telepon : dom('no_telepon').value,
+    //           note : dom('nomor_meja').value
+    //       }
+    //     })
+    //     })
+        // console.log(localStorage.getItem("cart"))
+    // }
 

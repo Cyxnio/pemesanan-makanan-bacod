@@ -9,6 +9,8 @@ app.post("/pesan", (req, res) => {
     note: req.body.note
   }
 
+
+
   let parsed = JSON.parse(data.pesanan);
   parsed.forEach(items => {
     console.log(items.nama);
