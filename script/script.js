@@ -40,7 +40,7 @@ const getCart = () => {
                 <input id="${cartItem.nomer}" type="button" class="button btn-remove" value="-">
                 <h3>${cartItem.jumlah}</h3>
                 <input onclick="addToCart('${cartItem.nama_makanan}', '${cartItem.harga_makanan}', '${cartItem.foto_makanan}', '${cartItem.nomer}')" type="button" class="button" value="+">
-                <i id="${cartItem.nomer}" type="button" class="button btn-delete" data-feather="trash-2"></i>
+                <i data-feather="trash-2" id="${cartItem.nomer}" type="button" class="btn-delete">Delete</i>
             </div>
         </div>
     </div>`

@@ -19,33 +19,44 @@
         </div>
         <div class="list-cart">
                 
+        </div>
+        <div class="footer">
+            <div class="form">
+                <form id="form_checkout" method="post" action="http://localhost:9000/pesan" >
+                    <div class="label">
+                        <label for="nama_pemesan_id">Nama Pemesan</label>
+                        <input type="text" name="nama_pemesan" id="nama_pemesan_id" class="btn-form">
+                    </div>
+                    <div class="label">
+                        <label for="nomor_meja_id">Nomor Meja </label>
+                        <input type="number" name="nomor_meja" id="nomor_meja_id" class="btn-form">
+                    </div>
+                        <input type="hidden" name="nomor_meja" id="nomor_meja_id" class="btn-form">
+                    <div class="label">
+                        <label for="no_telepon_id">No. telepon</label>
+                        <input type="number" name="no_telepon" id="no_telepon_id" class="btn-form">
+                    </div>
+                    <div class="label">
+                        <label for="note_id">Note</label>
+                        <input type="text" name="note" id="note_id" class="btn-form">
+                    </div>
+                    <input type="submit" class="btn-form submit" value="checkout">
+                </form>
+            </div>
+    
+            <div class="menu">
+                <div class="itemMenu">
+                    <a href="./index.html">
+                        <i data-feather="home"></i>
+                    </a>
+                </div>
+                <div class="itemMenu">
+                    <a href="#"  class="active">
+                        <i data-feather="shopping-cart"></i>
+                    </a>
+                </div>
+            </div>
         </div>    
-        <div class="form">
-            <form id="form_checkout" method="post" action="http://localhost:9000/pesan" >
-                <label for="nama_pemesan_id">Nama Pemesan</label>
-                <input type="text" name="nama_pemesan" id="nama_pemesan_id" class="btn-form">
-                <label for="nomor_meja_id">Nomor Meja</label>
-                <input type="text" name="nomor_meja" id="nomor_meja_id" class="btn-form">
-                <label for="no_telepon_id">No. telepon</label>
-                <input type="number" name="no_telepon" id="no_telepon_id" class="btn-form">
-                <label for="note_id">Note</label>
-                <input type="text" name="note" id="note_id" class="btn-form">
-                <button type="submit" class="btn-form submit" value="submit">
-            </form>
-        </div>
-
-        <div class="menu">
-            <div class="itemMenu">
-                <a href="./index.html">
-                    <i data-feather="home"></i>
-                </a>
-            </div>
-            <div class="itemMenu">
-                <a href="#"  class="active">
-                    <i data-feather="shopping-cart"></i>
-                </a>
-            </div>
-        </div>
     </div>
     
     <script src="script/script.js"></script>

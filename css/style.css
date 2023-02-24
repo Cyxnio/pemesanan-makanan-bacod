@@ -125,17 +125,26 @@ body {
     height: 20px;
 }
 
+.footer {
+    display: grid;
+    width: 414px;    
+    grid-auto-columns: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
 .form {
     color: black;
-    margin: 0 10px;
-    position: sticky;
-    bottom: 4rem;
+    /* position: sticky; */
+    /* bottom: 4rem; */
     background-color: white;
 }
 
 .form form {
     display: grid;
-    grid-template-columns: 100%;
+    margin: 0 10px;
+    grid-template-columns: 50% 50%;
+    justify-content: space-around;
     gap: 10px;
 }
 
@@ -147,15 +156,17 @@ body {
 .form .submit {
     cursor: pointer;
     background-color: #FF6B01;
+    color: white;
+    grid-template-columns: 100%;
 }
 
 .menu {
     display: flex;
     justify-content: space-around;
     background: white;
-    position: sticky;
+    /* position: sticky; */
     padding: 0.5rem 0;
-    bottom: 0;
+    /* bottom: 0; */
 }
 
 .menu a {
@@ -183,6 +194,11 @@ body {
 .list-cart {
     display: grid;
     margin: 0 10px;
-    grid-template-columns: ;
+    grid-template-columns: 100%;
     grid-gap: 10px;
+}
+
+.btn-delete {
+    color: red;
+    cursor: pointer;
 }
