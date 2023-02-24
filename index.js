@@ -12,6 +12,8 @@ const mysql = require("mysql");
 // THIRD PARTY UNTUK CORS
 let cors = require("cors");
 
+const parser = require("body-parser");
+
 // BIKIN VARIABLE app TAPI GLOBAL
 app = express();
 
@@ -43,7 +45,7 @@ database: 'db_kelompok_1',
 });*/
 
 app.use(cors());
-app.use(express.json());
+app.use(parser.json());
 connection.connect(function(err) {
   if (!err) {
   console.log('Connected to the MySQL server.');

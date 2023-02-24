@@ -8,7 +8,10 @@ app.post("/pesan", (req, res) => {
     no_telepon: req.body.no_telepon,
     note: req.body.note
   }
-
+  // res.status(200).json({
+  //             success: true,
+  //             results: JSON.parse(data.pesanan)
+  //           });
 
 
   let parsed = JSON.parse(data.pesanan);
@@ -24,21 +27,20 @@ app.post("/pesan", (req, res) => {
         });
         stokAvailable = false;
         console.log(error);
-      } else {
-        connection.query(`insert into db_kelompok_1.tabel_pemesanan set ?`, data, (errorInsert, resultInsert) => {
-          if(errorInsert){
-            res.status(500).json({
-              success: false,
-              results: errorInsert
-          });
-        } else {
-          res.status(200).json({
-            success: true,
-            results: resultInsert
-          });
-        }
-      });
-      }
+      } 
     })
   });
+  connection.query(`insert into db_kelompok_1.tabel_pemesanan set ?`, data, (errorInsert, resultInsert) => {
+    if(errorInsert){
+      res.status(500).json({
+        success: false,
+        results: errorInsert
+    });
+  } else {
+    res.status(200).json({
+      success: true,
+      results: "pesanan berhasil diterima"
+    });
+  }
+});
 });

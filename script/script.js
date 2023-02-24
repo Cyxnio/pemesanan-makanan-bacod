@@ -79,6 +79,7 @@ const addToCart = (nama, harga, foto, nomer) => {
     }
     console.log(cart)
     localStorage.setItem("cart", JSON.stringify(cart));
+    getCart();
 }
 
 
@@ -129,9 +130,29 @@ const deleteCart = (nomer) => {
  const formCheckout = document.getElementById('form_checkout');
  formCheckout.addEventListener('submit', (e) => {
     e.preventDefault();
+    var total = 0
+    cart.forEach((item) => {
+        total += (parseInt(item.harga_makanan)*item.jumlah)
+    })
     const fd = new FormData(formCheckout)
-    const data = JSON.stringify(Object.fromEntries(fd));
+    fd.append("pesanan",(localStorage.getItem('cart')))
+    fd.append("tanggal_pesan",new Date().toISOString().slice(0, 10))
+    fd.append("total_pesanan",total)
+    const data = (Object.fromEntries(fd));
     const pesanan = localStorage.getItem('cart')
+    console.log(data)
+    fetch('http://localhost:9000/pesan', {
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+            method: 'POST',
+            body: JSON.stringify(data)
+            }).then(function(res){
+                console.log(res)
+                localStorage.removeItem("cart")
+                window.location="/"
+            })
  })
 // const checkout = (nomor_meja, tanggal_pesan, pesanan, nama_pemesan, total_pesanan, no_telepon, note) => {
 //     let dom = document.getElementById  
@@ -157,4 +178,5 @@ const deleteCart = (nomer) => {
     //     })
         // console.log(localStorage.getItem("cart"))
     // }
+
 
