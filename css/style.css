@@ -157,16 +157,16 @@ body {
     cursor: pointer;
     background-color: #FF6B01;
     color: white;
-    grid-template-columns: 100%;
+    width: 85%;
 }
 
 .menu {
     display: flex;
     justify-content: space-around;
     background: white;
-    /* position: sticky; */
+    position: sticky;
     padding: 0.5rem 0;
-    /* bottom: 0; */
+    bottom: 0;
 }
 
 .menu a {
@@ -201,4 +201,20 @@ body {
 .btn-delete {
     color: red;
     cursor: pointer;
+}
+
+.menu-cart {
+    display: flex;
+    justify-content: space-around;
+    background: white;
+    padding: 0.5rem 0;
+}
+
+.menu-cart a {
+    color: var(--textDark);
+    text-decoration: none;
+}
+
+.form h3 {
+    margin: 0;
 }

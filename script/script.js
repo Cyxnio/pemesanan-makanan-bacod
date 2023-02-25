@@ -76,10 +76,11 @@ const addToCart = (nama, harga, foto, nomer) => {
                 break
             }
         };
-    }
+    } 
     console.log(cart)
     localStorage.setItem("cart", JSON.stringify(cart));
     getCart();
+    totalHarga();
 }
 
 
@@ -93,7 +94,7 @@ const removeCart = (nomer) => {
                 if(cart[i].jumlah > 0 ){
                     cart[i].jumlah -= 1
                 }else {
-                    
+
                 }
                 break
             }else if(cart[i].nomer != nomer && i == (cart.length-1)) {
@@ -105,6 +106,7 @@ const removeCart = (nomer) => {
     console.log(cart)
     localStorage.setItem("cart", JSON.stringify(cart));
     getCart()
+    totalHarga()
 }
 
 const deleteCart = (nomer) => {
@@ -127,12 +129,23 @@ const deleteCart = (nomer) => {
     getCart()
 }
 
+const totalHarga = () => {
+    let total = 0
+    cart.forEach((item) => {
+        total += (parseInt(item.harga_makanan)*item.jumlah)
+        console.log('total', total)
+    })
+    const totalPesanan = document.querySelector(".total");
+    totalPesanan.innerHTML = `<h3>Total : Rp. ${total} </h3>`;
+}
+
  const formCheckout = document.getElementById('form_checkout');
  formCheckout.addEventListener('submit', (e) => {
     e.preventDefault();
-    var total = 0
+    let total = 0
     cart.forEach((item) => {
         total += (parseInt(item.harga_makanan)*item.jumlah)
+        console.log('total', total)
     })
     const fd = new FormData(formCheckout)
     fd.append("pesanan",(localStorage.getItem('cart')))
@@ -140,7 +153,7 @@ const deleteCart = (nomer) => {
     fd.append("total_pesanan",total)
     const data = (Object.fromEntries(fd));
     const pesanan = localStorage.getItem('cart')
-    console.log(data)
+ 
     fetch('http://localhost:9000/pesan', {
         headers: {
             'Accept': 'application/json',

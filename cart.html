@@ -40,11 +40,16 @@
                         <label for="note_id">Note</label>
                         <input type="text" name="note" id="note_id" class="btn-form">
                     </div>
-                    <input type="submit" class="btn-form submit" value="checkout">
+                    <div class="total">
+                        <h3 class="total-harga"></h3>
+                    </div>
+                    <div class="checkout label">
+                        <input type="submit" class="btn-form submit" value="checkout">
+                    </div>  
                 </form>
             </div>
     
-            <div class="menu">
+            <div class="menu-cart">
                 <div class="itemMenu">
                     <a href="./index.html">
                         <i data-feather="home"></i>
@@ -61,8 +66,10 @@
     
     <script src="script/script.js"></script>
     <script>
+           
         feather.replace()
         getCart()
+        totalHarga()
     </script>
     </body>
 </html>
